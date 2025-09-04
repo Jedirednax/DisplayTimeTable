@@ -1,0 +1,56 @@
+﻿<Window x:Class="DisplayTimetable.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DisplayTimetable"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="900" Width="1600" ResizeMode="CanResize" HorizontalAlignment="Stretch">
+    <!--<Frame x:Name="frm" HorizontalAlignment="Stretch"/>-->
+
+
+
+    <Grid x:Name="grdMWContent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <ToolBarTray Grid.Column="0" Grid.Row="0">
+            <ToolBar  Band="0" BandIndex="0">
+                <Menu>
+                    <MenuItem Header="Menu">
+                        <MenuItem Header="File">
+                            <MenuItem Header="Copy"/>
+                            <MenuItem Header="Paste"/>
+                        </MenuItem>
+                    </MenuItem>
+                </Menu>
+                <Separator/>
+                <Button x:Name="btnCTT" Content="AddCTT" Width="100" Click="btnCTT_ClickAsync"/>
+                <Button x:Name="btnPAS" Content="AddPAS" Width="100" Click="btnPAS_ClickAsync"/>
+                <Separator/>
+                <Menu>
+                    <MenuItem Header="Modules">
+                        <MenuItem Header="View">
+                            <MenuItem Header="Sessions"/>
+                            <MenuItem Header="Lecture"/>
+                        </MenuItem>
+                        <MenuItem Header="Update">
+                            <MenuItem Header="Sessions"/>
+                            <MenuItem Header="Lecture"/>
+                        </MenuItem>
+                    </MenuItem>
+                </Menu>
+
+                <Separator/>
+                <Separator/>
+            </ToolBar>
+        </ToolBarTray>
+
+
+        <Frame x:Name="frmDisplay" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+
+        <StatusBar x:Name="stbDet" Grid.Row="3" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>

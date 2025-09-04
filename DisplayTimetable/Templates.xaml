@@ -1,0 +1,86 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:cust="clr-namespace:DisplayTimetable">
+
+
+    <Style x:Key="lblDay" TargetType="Label">
+        <Setter Property="Width"                      Value="Auto"/>
+        <Setter Property="Height"                     Value="50"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment"   Value="Center"/>
+        <Setter Property="HorizontalAlignment"        Value="Stretch"/>
+        <Setter Property="VerticalAlignment"          Value="Center"/>
+    </Style>
+
+    <Style x:Key="btnModuleAssingment" TargetType="Button">
+        <Setter Property="Width"                      Value="100"/>
+        <Setter Property="Height"                     Value="100"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment"   Value="Center"/>
+        <Setter Property="HorizontalAlignment"        Value="Stretch"/>
+        <Setter Property="VerticalAlignment"          Value="Center"/>
+    </Style>
+
+    <Style x:Key="btnModuleSession" TargetType="Button">
+        <Setter Property="Width"                      Value="Auto"/>
+        <Setter Property="Height"                     Value="Auto"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment"   Value="Center"/>
+        <Setter Property="HorizontalAlignment"        Value="Center"/>
+        <Setter Property="VerticalAlignment"          Value="Center"/>
+    </Style>
+
+    <Style x:Key="{x:Static ToolBar.SeparatorStyleKey}" TargetType="Separator">
+        <Setter Property="Background" Value="DarkGray"/>
+        <Setter Property="Width" Value="2"/>
+    </Style>
+
+    <Style x:Key="{x:Static ToolBar.ButtonStyleKey}" TargetType="Button">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="{x:Static ToolBar.MenuStyleKey}" TargetType="Menu">
+
+    </Style>
+
+    
+    <DataTemplate x:Key="CellToDay" DataType="cust:altMonth">
+        <cust:icDayDisplay BorderThickness="1" BorderBrush="Black"/>
+    </DataTemplate>
+
+    <DataTemplate x:Key="CellOddMonth" DataType="cust:altMonth">
+        <cust:icDayDisplay Background="White"/>
+    </DataTemplate>
+
+
+    <DataTemplate x:Key="CellEvenMonth" DataType="cust:altMonth">
+        <cust:icDayDisplay  Background="LightGray"/>
+    </DataTemplate>
+    
+    
+    
+    <!--<DataTemplate x:Key="btnTemplate" DataType="Button">
+        <Button x:Name="btnMod" Content="{Binding}" Background="Gray" BorderThickness="0"/>
+        <DataTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=module.ModuleCode}" Value="XBCAD7319">
+                <Setter TargetName="btnMod"    Property="Background"             Value="Orange"/>
+                <Setter TargetName="btnMod"    Property="BorderBrush"             Value="Orange"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=module.ModuleCode}" Value="PROG7312 ">
+                <Setter TargetName="btnMod"    Property="Background"             Value="Purple"/>
+                <Setter TargetName="btnMod"    Property="BorderBrush"             Value="Purple"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=module.ModuleCode}" Value="OPSC7312 ">
+                <Setter TargetName="btnMod"    Property="Background"             Value="MediumPurple"/>
+                <Setter TargetName="btnMod"    Property="BorderBrush"             Value="MediumPurple"/>
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=module.ModuleCode}" Value="APDS7311 ">
+                <Setter TargetName="btnMod"    Property="Background"             Value="LightBlue"/>
+                <Setter TargetName="btnMod"    Property="BorderBrush"             Value="LightBlue"/>
+            </DataTrigger>
+        </DataTemplate.Triggers>
+    </DataTemplate>-->
+    <cust:altMonth x:Key="altMonthObj"/>
+</ResourceDictionary>
