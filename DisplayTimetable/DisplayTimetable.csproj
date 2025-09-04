@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Timetable\Timetable\Timetable.csproj" />
+    <ProjectReference Include="..\Timetable\Timetable.csproj" />
   </ItemGroup>
 
 </Project>
